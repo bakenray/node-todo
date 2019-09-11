@@ -26,6 +26,9 @@ switch(verb){
     case 'done':
         taskDone(list,n)
         break;
+    case 'notdone':
+        taskNotDone(list,n)
+        break;
     case 'edit':
         editTask(list,n,content2)
         break;
@@ -69,6 +72,9 @@ function removeTask(list,n){//从list移除todo
 }
 function taskDone(list,n){ //完成某个todo
     list[n-1][1] = true
+}
+function taskNotDone(list,n){ //某个todo取消完成
+    list[n-1][1] = false
 }
 function editTask(list,n,content2){ //编辑某个todo
     list[n-1][0] = content2
